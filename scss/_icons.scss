@@ -24,28 +24,37 @@ img.svg {
 	@media #{$small-only} {
 		width: 4em;
 	}
+	li:first-child {
+		padding: 1rem 1rem;
+		height: 4.375rem;
+	}
 	&.apps-icon {
-
-		@media #{$small-up} {
-			width: 3em;
-			span {
-	            padding: 0.65rem 0 0 2rem;
-			}
-		}
-		@media #{$medium-up} {
-			width: 3.3em;
-			padding: 0.8rem 0.2rem 0rem 1rem;
-			span {
-	            padding: 0.65rem 0 0 2rem;
-			}
-		}
-		@media #{$large-up} {
-			width: auto;
-			padding: 0.8rem 0.5rem 0rem 1rem;
-		}
-		@media #{$xlarge-up} {
-			padding: 0.8rem 0.8rem 0rem 1rem;
-		}
+		border-radius: 20%;
+		/* border-color: #ccc; */
+		/* border-style: solid; */
+		/* border-width: 1px; */
+		background: #fff;
+		padding: 0.5rem;
+		// @media #{$small-up} {
+		// 	width: 3em;
+		// 	span {
+	 //            padding: 0.65rem 0 0 2rem;
+		// 	}
+		// }
+		// @media #{$medium-up} {
+		// 	width: 3.3em;
+		// 	padding: 0.8rem 0.2rem 0rem 1rem;
+		// 	span {
+	 //            padding: 0.65rem 0 0 2rem;
+		// 	}
+		// }
+		// @media #{$large-up} {
+		// 	width: auto;
+		// 	padding: 0.8rem 0.5rem 0rem 1rem;
+		// }
+		// @media #{$xlarge-up} {
+		// 	padding: 0.8rem 0.8rem 0rem 1rem;
+		// }
 	}
 	&.user-icon {
 		@media #{$small-up} {
@@ -138,8 +147,19 @@ img.svg {
 			height: 3rem;
 			background-size: 50%;
 			background-position: 0.75rem 0.75rem;
+			background-color:$round-icon-bg-color;
+			@include transition();
+		}
+		
+	}
+	&-icon:hover, &-icon:focus {	
+		div.round {
+			@include opacity(1);
+			@include transition();
+			background-color:$round-icon-bg-hover-color;
 		}
 	}
+	
 }
 a.modal-img-link span {
 	padding: 2.4rem 0 0 1rem;
